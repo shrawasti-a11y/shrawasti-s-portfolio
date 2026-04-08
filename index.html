@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrawasti Vijay Dhole — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- Navigation -->
+<nav id="navbar">
+    <div class="nav-logo">SVD</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#achievements">Certs</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleDarkMode()">
+        <span class="toggle-icon">🌙</span>
+    </button>
+    <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+        <li><a href="#achievements" onclick="closeMobileMenu()">Certs</a></li>
+        <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+        <li><a href="#gallery" onclick="closeMobileMenu()">Gallery</a></li>
+        <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+</div>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-bg-text">SHRAWASTI</div>
+    <div class="hero-content">
+        <div class="hero-image-wrap">
+            <div class="hero-image-frame">
+                <img src="assets/profile.jpg" alt="Shrawasti Vijay Dhole" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="profile-placeholder">SVD</div>
+            </div>
+            <div class="hero-accent-ring"></div>
+        </div>
+        <div class="hero-text">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Shrawasti<br><em>Vijay Dhole</em></h1>
+            <p class="hero-tagline">B.Tech CSE · AI Enthusiast · Future Software Engineer</p>
+            <div class="hero-tags">
+                <span class="tag">Python</span>
+                <span class="tag">MATLAB</span>
+                <span class="tag">AI/ML</span>
+                <span class="tag">Problem Solver</span>
+            </div>
+            <a href="#contact" class="cta-btn">Get In Touch</a>
+        </div>
+    </div>
+    <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="section-label">01 / About</div>
+    <div class="about-grid">
+        <div class="about-heading">
+            <h2>Who<br>I <em>Am</em></h2>
+        </div>
+        <div class="about-content">
+            <p class="about-intro">I am a first-year Computer Science student at <strong>MIT Vishwaprayag University</strong>, driven by curiosity and a love for technology.</p>
+            <div class="about-cards">
+                <div class="about-card">
+                    <div class="about-card-icon">💡</div>
+                    <h4>Interests</h4>
+                    <p>Artificial Intelligence, Programming, Problem Solving, Innovation</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">🎯</div>
+                    <h4>Goals</h4>
+                    <p>Become a skilled software engineer and contribute to AI-driven solutions</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-icon">⚡</div>
+                    <h4>Strengths</h4>
+                    <p>Fast learner, hardworking, curious, detail-oriented thinker</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Achievements Section -->
+<section id="achievements" class="achievements">
+    <div class="section-label">02 / Certifications</div>
+    <h2 class="section-title">My <em>Achievements</em></h2>
+    <div class="certs-grid">
+        <div class="cert-card">
+            <div class="cert-img-wrap">
+                <img src="assets/cert1.jpg" alt="Python Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="cert-placeholder">🐍</div>
+            </div>
+            <div class="cert-info">
+                <span class="cert-platform">Coursera</span>
+                <h3>Programming for Everybody</h3>
+                <p>Python — University of Michigan</p>
+            </div>
+        </div>
+        <div class="cert-card">
+            <div class="cert-img-wrap">
+                <img src="assets/cert2.jpg" alt="MATLAB Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="cert-placeholder">📊</div>
+            </div>
+            <div class="cert-info">
+                <span class="cert-platform">Coursera</span>
+                <h3>MATLAB Programming</h3>
+                <p>Vanderbilt University</p>
+            </div>
+        </div>
+        <div class="cert-card">
+            <div class="cert-img-wrap">
+                <img src="assets/cert3.jpg" alt="Physics Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="cert-placeholder">⚛️</div>
+            </div>
+            <div class="cert-info">
+                <span class="cert-platform">Academic</span>
+                <h3>Engineering Physics</h3>
+                <p>Prerequisites Completion</p>
+            </div>
+        </div>
+        <div class="cert-card">
+            <div class="cert-img-wrap">
+                <img src="assets/cert4.jpg" alt="Chemistry Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="cert-placeholder">🧪</div>
+            </div>
+            <div class="cert-info">
+                <span class="cert-platform">Academic</span>
+                <h3>Revisiting Chemistry</h3>
+                <p>Fundamentals Refresher</p>
+            </div>
+        </div>
+        <div class="cert-card featured">
+            <div class="cert-img-wrap">
+                <img src="assets/cert5.jpg" alt="AI Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="cert-placeholder">🤖</div>
+            </div>
+            <div class="cert-info">
+                <span class="cert-platform">AI Course</span>
+                <h3>Introduction to Modern AI</h3>
+                <p>Cutting-edge AI Concepts</p>
+                <a href="assets/ai_certificate.pdf" target="_blank" class="cert-link">View Certificate →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="section-label">03 / Projects</div>
+    <h2 class="section-title">My <em>Work</em></h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-num">01</div>
+            <div class="project-tag">AI</div>
+            <h3>AI4A Project</h3>
+            <p>AI-based project focusing on real-world problem solving using modern machine learning techniques.</p>
+            <div class="project-footer">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">AI/ML</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-num">02</div>
+            <div class="project-tag">Design</div>
+            <h3>Design Thinking Project</h3>
+            <p>Focused on user-centered problem solving and innovation using design thinking methodologies.</p>
+            <div class="project-footer">
+                <span class="tech-pill">UX</span>
+                <span class="tech-pill">Prototyping</span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-num">03</div>
+            <div class="project-tag">Academic</div>
+            <h3>ACE Project</h3>
+            <p>Academic coursework-based project demonstrating core engineering concepts and practical application.</p>
+            <div class="project-footer">
+                <span class="tech-pill">Engineering</span>
+                <span class="tech-pill">Research</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <div class="section-label">04 / Gallery</div>
+    <h2 class="section-title">Certificate <em>Gallery</em></h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="assets/cert1.jpg" alt="Certificate 1" onerror="this.parentElement.classList.add('no-img')">
+            <div class="gallery-overlay"><span>Python Cert</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="assets/cert2.jpg" alt="Certificate 2" onerror="this.parentElement.classList.add('no-img')">
+            <div class="gallery-overlay"><span>MATLAB Cert</span></div>
+        </div>
+        <div class="gallery-item">
+            <img src="assets/cert3.jpg" alt="Certificate 3" onerror="this.parentElement.classList.add('no-img')">
+            <div class="gallery-overlay"><span>Physics Cert</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="section-label">05 / Contact</div>
+    <div class="contact-inner">
+        <h2 class="section-title">Let's <em>Connect</em></h2>
+        <p class="contact-sub">I'm open to opportunities, collaborations, and conversations!</p>
+        <div class="contact-cards">
+            <a href="mailto:your@email.com" class="contact-card">
+                <span class="contact-icon">✉️</span>
+                <div>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">your@email.com</span>
+                </div>
+            </a>
+            <a href="tel:1234567890" class="contact-card">
+                <span class="contact-icon">📱</span>
+                <div>
+                    <span class="contact-label">Phone</span>
+                    <span class="contact-value">+91 1234567890</span>
+                </div>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" class="contact-card">
+                <span class="contact-icon">💻</span>
+                <div>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">github.com/yourusername</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <p class="footer-name">Shrawasti Vijay Dhole</p>
+        <p class="footer-copy">© 2026 · B.Tech CSE · MIT Vishwaprayag University</p>
+        <p class="footer-made">Crafted with ❤️</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
