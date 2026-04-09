@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shrawasti Vijay Dhole — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">S<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+    <button class="hamburger" id="hamburger">☰</button>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-placeholder">
+          <span>S</span>
+        </div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Shrawasti<br/><em>Vijay Dhole</em></h1>
+        <p class="hero-tagline">B.Tech CSE Student &bull; MIT Vishwaprayag University</p>
+        <p class="hero-intro">A curious and motivated first-year Computer Science student with a passion for technology, problem-solving, and continuous learning. Driven to build meaningful digital experiences and grow in the world of software development.</p>
+        <div class="hero-btns">
+          <a href="#achievements" class="btn-primary">View Achievements</a>
+          <a href="#contact" class="btn-outline">Contact Me</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">↓ scroll</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">01 — About Me</div>
+    <h2 class="section-title">Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon">🎓</div>
+        <h3>Education</h3>
+        <p>Currently pursuing <strong>B.Tech in Computer Science Engineering</strong> at MIT Vishwaprayag University, Pune. Studying core foundational subjects including C Programming, Discrete Mathematics, Engineering Physics, and Chemistry.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">💡</div>
+        <h3>Interests</h3>
+        <p>Passionate about <strong>Artificial Intelligence</strong>, web development, and programming. I enjoy exploring how technology can solve real-world problems and love learning through online platforms like Coursera and Cisco NetAcad.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">🎯</div>
+        <h3>Goals</h3>
+        <p>My goal is to become a proficient software engineer skilled in AI and modern development practices. I aim to contribute to impactful projects and pursue a career where technology meets creativity.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">⚡</div>
+        <h3>Strengths</h3>
+        <p>Quick learner with strong <strong>analytical thinking</strong> and attention to detail. Dedicated, self-motivated, and always willing to go the extra mile to master new concepts and deliver quality work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="section-label">02 — Achievements</div>
+    <h2 class="section-title">Certificates &amp; Credentials</h2>
+
+    <div class="ach-grid">
+
+      <div class="ach-card" data-category="coursera">
+        <div class="ach-badge">Coursera</div>
+        <div class="ach-icon">🐍</div>
+        <h3>Programming for Everybody</h3>
+        <p class="ach-org">University of Michigan</p>
+        <p class="ach-date">Jan 19, 2026</p>
+        <p class="ach-desc">Completed the introductory Python programming course — "Getting Started with Python" — offered by the University of Michigan on Coursera. Covers variables, functions, loops, and basic data structures.</p>
+        <a href="assets/cert_python.jpeg" target="_blank" class="ach-link">View Certificate →</a>
+      </div>
+
+      <div class="ach-card" data-category="coursera">
+        <div class="ach-badge">Coursera</div>
+        <div class="ach-icon">⚗️</div>
+        <h3>Revisiting Chemistry</h3>
+        <p class="ach-org">MIT Vishwaprayag University</p>
+        <p class="ach-date">Feb 5, 2026</p>
+        <p class="ach-desc">Preparatory course for ACE-AS1201. Covers fundamental chemistry concepts essential for engineering students, authorized by MIT Vishwaprayag University and offered via Coursera.</p>
+        <a href="assets/cert_chemistry.jpeg" target="_blank" class="ach-link">View Certificate →</a>
+      </div>
+
+      <div class="ach-card" data-category="coursera">
+        <div class="ach-badge">Coursera</div>
+        <div class="ach-icon">⚛️</div>
+        <h3>Engineering Physics Prerequisites</h3>
+        <p class="ach-org">MIT Vishwaprayag University</p>
+        <p class="ach-date">Nov 19, 2025</p>
+        <p class="ach-desc">Preparatory course covering essential physics concepts for engineering — mechanics, waves, and electromagnetism — authorized by MIT Vishwaprayag University. Verified on Coursera.</p>
+        <a href="assets/cert_physics.jpeg" target="_blank" class="ach-link">View Certificate →</a>
+      </div>
+
+      <div class="ach-card" data-category="netcad">
+        <div class="ach-badge">Cisco NetAcad</div>
+        <div class="ach-icon">🤖</div>
+        <h3>Introduction to Modern AI</h3>
+        <p class="ach-org">MIT Vishwaprayag University × Cisco</p>
+        <p class="ach-date">Feb 10, 2026</p>
+        <p class="ach-desc">Completed Introduction to Modern AI through the Cisco Networking Academy program at MIT Vishwaprayag University. Covers AI concepts, applications, and the role of intelligent systems in modern computing.</p>
+        <a href="assets/cert_ai.pdf" target="_blank" class="ach-link">View Certificate →</a>
+      </div>
+
+      <div class="ach-card" data-category="project">
+        <div class="ach-badge">Ai4A Project</div>
+        <div class="ach-icon">🧠</div>
+        <h3>AI for All (Ai4A)</h3>
+        <p class="ach-org">MIT Vishwaprayag University</p>
+        <p class="ach-date">2025–2026</p>
+        <p class="ach-desc">Participated in the Ai4A initiative — an AI literacy and application program designed to democratize AI knowledge. Explored practical AI tools and their real-world applications in everyday life.</p>
+      </div>
+
+      <div class="ach-card" data-category="project">
+        <div class="ach-badge">Design Thinking</div>
+        <div class="ach-icon">💎</div>
+        <h3>Design Thinking Project</h3>
+        <p class="ach-org">MIT Vishwaprayag University</p>
+        <p class="ach-date">2025–2026</p>
+        <p class="ach-desc">Completed a structured Design Thinking project applying human-centered design methodology — empathize, define, ideate, prototype, and test — to solve a real-world problem identified during the semester.</p>
+      </div>
+
+      <div class="ach-card" data-category="project">
+        <div class="ach-badge">ACE Project</div>
+        <div class="ach-icon">🔬</div>
+        <h3>ACE (Applied Course Enhancement)</h3>
+        <p class="ach-org">MIT Vishwaprayag University</p>
+        <p class="ach-date">2025–2026</p>
+        <p class="ach-desc">Completed the ACE project as part of the university's integrated curriculum, applying theoretical knowledge from core subjects (Physics, Chemistry, Mathematics) to practical engineering scenarios.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">03 — Projects</div>
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-thumb project-thumb-1">
+          <span class="project-emoji">💻</span>
+        </div>
+        <div class="project-info">
+          <h3>C Programming Exercises</h3>
+          <p>A collection of C programs covering factorial computation, decimal-to-binary conversion, array operations, data type ranges, leap year logic, and more — all written in C89/C90 standard.</p>
+          <div class="project-tags">
+            <span>C</span><span>Algorithms</span><span>Data Types</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb project-thumb-2">
+          <span class="project-emoji">📐</span>
+        </div>
+        <div class="project-info">
+          <h3>Discrete Mathematics Solutions</h3>
+          <p>Solved a comprehensive problem set on non-homogeneous linear recurrence relations, including characteristic root method, particular solutions, and overlap rules for Discrete Mathematics (AS1003).</p>
+          <div class="project-tags">
+            <span>Math</span><span>Recurrence</span><span>Logic</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb project-thumb-3">
+          <span class="project-emoji">🌐</span>
+        </div>
+        <div class="project-info">
+          <h3>Digital Portfolio Website</h3>
+          <p>This very portfolio — a fully responsive personal website built with HTML, CSS, and JavaScript, featuring dark mode toggle, smooth scroll animations, a gallery lightbox, and GitHub Pages deployment.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb project-thumb-4">
+          <span class="project-emoji">🐍</span>
+        </div>
+        <div class="project-info">
+          <h3>Python Programming (Coursera)</h3>
+          <p>Completed "Programming for Everybody" by University of Michigan. Covers variables, conditionals, loops, functions, strings, files, lists, dictionaries, tuples, and regular expressions in Python.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Coursera</span><span>U of Michigan</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-label">04 — Gallery</div>
+    <h2 class="section-title">Photos &amp; Certificates</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox('assets/cert_python.jpeg', 'Programming for Everybody — University of Michigan')">
+        <img src="assets/cert_python.jpeg" alt="Python Certificate" />
+        <div class="gallery-overlay">
+          <p>Python Certificate</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('assets/cert_chemistry.jpeg', 'Revisiting Chemistry — MIT Vishwaprayag University')">
+        <img src="assets/cert_chemistry.jpeg" alt="Chemistry Certificate" />
+        <div class="gallery-overlay">
+          <p>Chemistry Certificate</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('assets/cert_physics.jpeg', 'Engineering Physics Prerequisites — MIT Vishwaprayag University')">
+        <img src="assets/cert_physics.jpeg" alt="Physics Certificate" />
+        <div class="gallery-overlay">
+          <p>Physics Certificate</p>
+        </div>
+      </div>
+      <div class="gallery-item gallery-pdf" onclick="window.open('assets/cert_ai.pdf','_blank')">
+        <div class="pdf-placeholder">
+          <span>📄</span>
+          <p>Introduction to Modern AI</p>
+          <small>Click to open PDF</small>
+        </div>
+        <div class="gallery-overlay">
+          <p>AI Certificate (PDF)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()">
+      <button class="lb-close" onclick="closeLightbox()">✕</button>
+      <img id="lb-img" src="" alt="" />
+      <p id="lb-cap"></p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">05 — Contact</div>
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="contact-sub">Feel free to reach out for collaborations, opportunities, or just to say hello!</p>
+    <div class="contact-cards">
+      <a href="mailto:shrawasti@example.com" class="contact-card">
+        <span class="cc-icon">📧</span>
+        <span class="cc-label">Email</span>
+        <span class="cc-value">shrawasti@mitvpu.ac.in</span>
+      </a>
+      <a href="https://github.com/" target="_blank" class="contact-card">
+        <span class="cc-icon">🐙</span>
+        <span class="cc-label">GitHub</span>
+        <span class="cc-value">github.com/shrawasti</span>
+      </a>
+      <a href="https://linkedin.com/" target="_blank" class="contact-card">
+        <span class="cc-icon">💼</span>
+        <span class="cc-label">LinkedIn</span>
+        <span class="cc-value">linkedin.com/in/shrawasti</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Shrawasti Vijay Dhole &nbsp;·&nbsp; B.Tech CSE, MIT Vishwaprayag University</p>
+    <p class="footer-sub">Built with HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
