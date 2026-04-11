@@ -1,92 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shrawasti | Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shrawasti Vijay Dhole — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<canvas id="bg"></canvas>
-<div class="cursor" id="cursor"></div>
+  <!-- CURSOR GLOW -->
+  <div id="cursor-glow"></div>
+  <div id="cursor-dot"></div>
 
-<header>
-<h2>S.</h2>
-<nav>
-<a href="#home">Home</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#game">Game</a>
-<a href="#contact">Contact</a>
-</nav>
-<button onclick="toggleDark()">🌙</button>
-</header>
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">S<span>.</span></div>
+      <div class="loader-bar-wrap"><div class="loader-bar" id="loader-bar"></div></div>
+      <p class="loader-text" id="loader-text">Initializing...</p>
+    </div>
+    <div class="loader-circles">
+      <div></div><div></div><div></div>
+    </div>
+  </div>
 
-<section id="home" class="hero">
-<h1>👋 I'm Shrawasti</h1>
-<p id="typing"></p>
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"></div>
 
-<a href="resume.pdf" download>
-<button>Download Resume 📄</button>
-</a>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">S<span>.</span></div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-a">Home</a></li>
+      <li><a href="#about" class="nav-a">About</a></li>
+      <li><a href="#skills" class="nav-a">Skills</a></li>
+      <li><a href="#achievements" class="nav-a">Achievements</a></li>
+      <li><a href="#projects" class="nav-a">Projects</a></li>
+      <li><a href="#gallery" class="nav-a">Gallery</a></li>
+      <li><a href="#contact" class="nav-a">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button id="dark-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </nav>
 
-<button onclick="scrollToSection('projects')">Explore 🚀</button>
-</section>
+  <!-- HOME -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-orb"></div>
+    <div id="hero-particles"></div>
+    <div class="hero-content">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring"></div>
+        <div class="hero-photo-placeholder"><span>S</span></div>
+      </div>
+      <div class="hero-text">
+        <p class="hero-greeting">👋 Hello, I'm</p>
+        <h1 class="hero-name">Shrawasti<br/><em>Vijay Dhole</em></h1>
+        <p class="hero-tagline">
+          <span class="typed-static">I am a </span><span id="typed-text"></span><span class="typed-cursor">|</span>
+        </p>
+        <p class="hero-intro">A curious and motivated first-year Computer Science student with a passion for AI, technology, and building meaningful digital experiences that matter.</p>
+        <div class="hero-btns">
+          <a href="#achievements" class="btn-primary">View Achievements 🚀</a>
+          <a href="#contact" class="btn-outline">Contact Me</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">↓ scroll</div>
+  </section>
 
-<section id="projects">
-<h2>Projects</h2>
-<div class="grid" id="projectsGrid"></div>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">01 — About Me</div>
+    <h2 class="section-title">Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-card tilt-card">
+        <div class="tilt-shine"></div>
+        <div class="about-icon">🎓</div>
+        <h3>Education</h3>
+        <p>Currently pursuing <strong>B.Tech in Computer Science Engineering</strong> at MIT Vishwaprayag University, Pune. Studying C Programming, Discrete Mathematics, Engineering Physics, and Chemistry.</p>
+      </div>
+      <div class="about-card tilt-card">
+        <div class="tilt-shine"></div>
+        <div class="about-icon">💡</div>
+        <h3>Interests</h3>
+        <p>Passionate about <strong>Artificial Intelligence</strong>, web development, and programming. I love exploring how technology solves real-world problems via Coursera and Cisco NetAcad.</p>
+      </div>
+      <div class="about-card tilt-card">
+        <div class="tilt-shine"></div>
+        <div class="about-icon">🎯</div>
+        <h3>Goals</h3>
+        <p>To become a proficient software engineer skilled in AI and modern development. I aim to contribute to impactful projects where technology meets creativity and purpose.</p>
+      </div>
+      <div class="about-card tilt-card">
+        <div class="tilt-shine"></div>
+        <div class="about-icon">⚡</div>
+        <h3>Strengths</h3>
+        <p>Quick learner with strong <strong>analytical thinking</strong> and attention to detail. Dedicated, self-motivated, always willing to go the extra mile to master new concepts.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="skills">
-<h2>Skills</h2>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">02 — Skills</div>
+    <h2 class="section-title">My Skill Set</h2>
+    <div class="skills-container">
+      <div class="skills-bars">
+        <div class="skill-item reveal-skill">
+          <div class="skill-header"><span class="skill-name">C Programming</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="80" style="--clr:#7c3aed"></div></div>
+        </div>
+        <div class="skill-item reveal-skill">
+          <div class="skill-header"><span class="skill-name">Python</span><span class="skill-pct">65%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="65" style="--clr:#ec4899"></div></div>
+        </div>
+        <div class="skill-item reveal-skill">
+          <div class="skill-header"><span class="skill-name">HTML &amp; CSS</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="75" style="--clr:#06b6d4"></div></div>
+        </div>
+        <div class="skill-item reveal-skill">
+          <div class="skill-header"><span class="skill-name">JavaScript</span><span class="skill-pct">55%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="55" style="--clr:#f59e0b"></div></div>
+        </div>
+        <div class="skill-item reveal-skill">
+          <div class="skill-header"><span class="skill-name">Discrete Mathematics</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="70" style="--clr:#10b981"></div></div>
+        </div>
+        <div class="skill-item reveal-skill">
+          <div class="skill-header"><span class="skill-name">AI &amp; Machine Learning</span><span class="skill-pct">50%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-pct="50" style="--clr:#ef4444"></div></div>
+        </div>
+      </div>
+      <div class="skills-tags-wrap">
+        <h3 class="skills-tags-title">Technologies &amp; Tools</h3>
+        <div class="skills-tags">
+          <span class="stag">💻 C / C89</span>
+          <span class="stag">🐍 Python</span>
+          <span class="stag">🌐 HTML5</span>
+          <span class="stag">🎨 CSS3</span>
+          <span class="stag">⚙️ JavaScript</span>
+          <span class="stag">🤖 Cisco AI</span>
+          <span class="stag">📊 Coursera</span>
+          <span class="stag">🔗 GitHub</span>
+          <span class="stag">📐 Discrete Math</span>
+          <span class="stag">🧪 Engineering Physics</span>
+          <span class="stag">⚗️ Chemistry</span>
+          <span class="stag">🧠 Design Thinking</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<p>C Programming</p>
-<div class="bar"><div style="width:80%"></div></div>
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="section-label">03 — Achievements</div>
+    <h2 class="section-title">Certificates &amp; Credentials</h2>
+    <div class="ach-grid">
 
-<p>Python</p>
-<div class="bar"><div style="width:65%"></div></div>
+      <div class="ach-card tilt-card" data-category="coursera">
+        <div class="tilt-shine"></div>
+        <div class="ach-badge">Coursera</div>
+        <div class="ach-icon">🐍</div>
+        <h3>Programming for Everybody</h3>
+        <p class="ach-org">University of Michigan</p>
+        <p class="ach-date">Jan 19, 2026</p>
+        <p class="ach-desc">Introductory Python programming by University of Michigan. Covers variables, functions, loops, and basic data structures in Python.</p>
+        <a href="assets/cert_python.jpeg" target="_blank" class="ach-link">View Certificate →</a>
+      </div>
 
-<p>HTML CSS</p>
-<div class="bar"><div style="width:75%"></div></div>
+      <div class="ach-card tilt-card" data-category="coursera">
+        <div class="tilt-shine"></div>
+        <div class="ach-badge">Coursera</div>
+        <div class="ach-icon">⚗️</div>
+        <h3>Revisiting Chemistry</h3>
+        <p class="ach-org">MIT Vishwaprayag University</p>
+        <p class="ach-date">Feb 5, 2026</p>
+        <p class="ach-desc">Preparatory course for ACE-AS1201 covering fundamental chemistry concepts essential for engineering students.</p>
+        <a href="assets/cert_chemistry.jpeg" target="_blank" class="ach-link">View Certificate →</a>
+      </div>
 
-<p>JavaScript</p>
-<div class="bar"><div style="width:55%"></div></div>
+      <div class="ach-card tilt-card" data-category="coursera">
+        <div class="tilt-shine"></div>
+        <div class="ach-badge">Coursera</div>
+        <div class="ach-icon">⚛️</div>
+        <h3>Engineering Physics Prerequisites</h3>
+        <p class="ach-org">MIT Vishwaprayag University</p>
+        <p class="ach-date">Nov 19, 2025</p>
+        <p class="ach-desc">Physics for engineering — mechanics, waves, electromagnetism — authorized by MIT Vishwaprayag University on Coursera.</p>
+        <a href="assets/cert_physics.jpeg" target="_blank" class="ach-link">View Certificate →</a>
+      </div>
 
-</section>
+      <div class="ach-card tilt-card" data-category="netcad">
+        <div class="tilt-shine"></div>
+        <div class="ach-badge">Cisco NetAcad</div>
+        <div class="ach-icon">🤖</div>
+        <h3>Introduction to Modern AI</h3>
+        <p class="ach-org">MIT Vishwaprayag University × Cisco</p>
+        <p class="ach-date">Feb 10, 2026</p>
+        <p class="ach-desc">Completed Introduction to Modern AI via Cisco Networking Academy. Covers AI concepts, applications, and intelligent systems.</p>
+        <a href="assets/cert_ai.pdf" target="_blank" class="ach-link">View Certificate →</a>
+      </div>
 
-<section id="game">
-<h2>Mini Game 🎮</h2>
-<p>Score: <span id="score">0</span></p>
-<button onclick="increaseScore()">Click Me!</button>
-</section>
+      <div class="ach-card tilt-card" data-category="project">
+        <div class="tilt-shine"></div>
+        <div class="ach-badge">Ai4A Project</div>
+        <div class="ach-icon">🧠</div>
+        <h3>AI for All (Ai4A)</h3>
+        <p class="ach-org">MIT Vishwaprayag University</p>
+        <p class="ach-date">2025–2026</p>
+        <p class="ach-desc">AI literacy initiative to democratize AI knowledge. Explored practical AI tools and their real-world applications in everyday life.</p>
+      </div>
 
-<section id="contact">
-<h2>Contact Me</h2>
+      <div class="ach-card tilt-card" data-category="project">
+        <div class="tilt-shine"></div>
+        <div class="ach-badge">Design Thinking</div>
+        <div class="ach-icon">💎</div>
+        <h3>Design Thinking Project</h3>
+        <p class="ach-org">MIT Vishwaprayag University</p>
+        <p class="ach-date">2025–2026</p>
+        <p class="ach-desc">Applied human-centered design — empathize, define, ideate, prototype, test — to solve a real-world problem during the semester.</p>
+      </div>
 
-<form action="https://formspree.io/f/YOUR_ID" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" placeholder="Message"></textarea>
-<button type="submit">Send</button>
-</form>
+      <div class="ach-card tilt-card" data-category="project">
+        <div class="tilt-shine"></div>
+        <div class="ach-badge">ACE Project</div>
+        <div class="ach-icon">🔬</div>
+        <h3>ACE (Applied Course Enhancement)</h3>
+        <p class="ach-org">MIT Vishwaprayag University</p>
+        <p class="ach-date">2025–2026</p>
+        <p class="ach-desc">Applied theoretical knowledge from Physics, Chemistry and Mathematics to practical engineering scenarios in the integrated curriculum.</p>
+      </div>
 
-</section>
+    </div>
+  </section>
 
-<div class="chatbot">
-<button onclick="toggleChat()">💬</button>
-<div class="chatbox" id="chatbox">
-<input id="userInput" placeholder="Ask...">
-<button onclick="reply()">Send</button>
-<p id="botReply"></p>
-</div>
-</div>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">04 — Projects</div>
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-grid">
 
-<script src="script.js"></script>
+      <div class="project-card tilt-card">
+        <div class="tilt-shine"></div>
+        <div class="project-glow" style="--glow:#7c3aed"></div>
+        <div class="project-thumb project-thumb-1">
+          <span class="project-emoji">💻</span>
+          <div class="project-thumb-overlay"><span>C Programs</span></div>
+        </div>
+        <div class="project-info">
+          <h3>C Programming Exercises</h3>
+          <p>Factorial, binary conversion, arrays, data type ranges, leap year logic — strict C89/C90 standard for OnlineGDB.</p>
+          <div class="project-tags"><span>C</span><span>Algorithms</span><span>Data Types</span></div>
+        </div>
+      </div>
 
-</body>
-</html>
+      <div class="project-card tilt-card">
+        <div class="tilt-shine"></div>
+        <div class="project-glow" style="--glow:#ec4899"></div>
+        <div class="project-thumb project-thumb-2">
+          <span class="project-emoji">📐</span>
+          <div class="project-thumb-overlay"><span>Math Solutions</span></div>
+        </div>
+        <div class="project-info">
+          <h3>Discrete Mathematics Solutions</h3>
+          <p>Non-homogeneous recurrence relations — characteristic roots, particular solutions, and overlap rule for AS1003.</p>
+          <div class="project-tags"><span>Math</span><span>Recurrence</span><span>Logic</span></div>
+        </div>
+      </div>
+
+      <div class="project-card tilt-card">
+        <div class="tilt-shine"></div>
+        <div class="project-glow" style="--glow:#06b6d4"></div>
+        <div class="project-thumb project-thumb-3">
+          <span class="project-emoji">🌐</span>
+          <div class="project-thumb-overlay"><span>Live Site</span></div>
+        </div>
+        <div class="project-info">
+          <h3>Digital Portfolio Website</h3>
+          <p>This portfolio — dark mode, 3D tilt, AI chatbot, typing animation, scroll effects, and GitHub Pages deployment.</p>
+          <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </div>
+      </div>
+
+      <div class="project-card tilt-card">
+        <div class="tilt-shine"></div>
+        <div class="project-glow" style="--glow:#10b981"></div>
+        <div class="project-thumb project-thumb-4">
+          <span class="project-emoji">🐍</span>
+          <div class="project-thumb-overlay"><span>Python Course</span></div>
+        </div>
+        <div class="project-info">
+          <h3>Python Programming (Coursera)</h3>
+          <p>"Programming for Everybody" by Univ. of Michigan — variables, loops, functions, lists, dicts, and regex.</p>
+          <div class="project-tags"><span>Python</span><span>Coursera</span><span>U of Michigan</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-label">05 — Gallery</div>
+    <h2 class="section-title">Photos &amp; Certificates</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox('assets/cert_python.jpeg','Programming for Everybody — University of Michigan')">
+        <img src="assets/cert_python.jpeg" alt="Python Certificate" />
+        <div class="gallery-overlay"><p>Python Certificate</p></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('assets/cert_chemistry.jpeg','Revisiting Chemistry — MIT Vishwaprayag University
