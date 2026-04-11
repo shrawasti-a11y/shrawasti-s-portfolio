@@ -417,3 +417,13 @@ footer {
   .hero-btns { justify-content: center; }
   section { padding: 80px 6vw 60px; }
 }
+.project-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 10px;
+}
