@@ -312,4 +312,90 @@
         <img src="assets/cert_python.jpeg" alt="Python Certificate" />
         <div class="gallery-overlay"><p>Python Certificate</p></div>
       </div>
-      <div class="gallery-item" onclick="openLightbox('assets/cert_chemistry.jpeg','Revisiting Chemistry — MIT Vishwaprayag University
+      <div class="gallery-item" onclick="openLightbox('assets/cert_chemistry.jpeg','Revisiting Chemistry — MIT Vishwaprayag University')">
+        <img src="assets/cert_chemistry.jpeg" alt="Chemistry Certificate" />
+        <div class="gallery-overlay"><p>Chemistry Certificate</p></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('assets/cert_physics.jpeg','Engineering Physics Prerequisites — MIT Vishwaprayag University')">
+        <img src="assets/cert_physics.jpeg" alt="Physics Certificate" />
+        <div class="gallery-overlay"><p>Physics Certificate</p></div>
+      </div>
+      <div class="gallery-item gallery-pdf" onclick="window.open('assets/cert_ai.pdf','_blank')">
+        <div class="pdf-placeholder">
+          <span>📄</span>
+          <p>Introduction to Modern AI</p>
+          <small>Click to open PDF</small>
+        </div>
+        <div class="gallery-overlay"><p>AI Certificate (PDF)</p></div>
+      </div>
+    </div>
+    <div id="lightbox" onclick="closeLightbox()">
+      <button class="lb-close" onclick="closeLightbox()">✕</button>
+      <img id="lb-img" src="" alt="" />
+      <p id="lb-cap"></p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">06 — Contact</div>
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="contact-sub">Feel free to reach out for collaborations, opportunities, or just to say hello!</p>
+    <div class="contact-cards">
+      <a href="mailto:shrawasti@mitvpu.ac.in" class="contact-card tilt-card">
+        <div class="tilt-shine"></div>
+        <span class="cc-icon">📧</span>
+        <span class="cc-label">Email</span>
+        <span class="cc-value">shrawasti@mitvpu.ac.in</span>
+      </a>
+      <a href="https://github.com/" target="_blank" class="contact-card tilt-card">
+        <div class="tilt-shine"></div>
+        <span class="cc-icon">🐙</span>
+        <span class="cc-label">GitHub</span>
+        <span class="cc-value">github.com/shrawasti</span>
+      </a>
+      <a href="https://linkedin.com/" target="_blank" class="contact-card tilt-card">
+        <div class="tilt-shine"></div>
+        <span class="cc-icon">💼</span>
+        <span class="cc-label">LinkedIn</span>
+        <span class="cc-value">linkedin.com/in/shrawasti</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Shrawasti Vijay Dhole &nbsp;·&nbsp; B.Tech CSE, MIT Vishwaprayag University</p>
+    <p class="footer-sub">Built with ❤️ using HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+  <!-- AI CHATBOT -->
+  <div id="chatbot-fab" onclick="toggleChat()" title="Ask AI about Shrawasti">
+    <span class="fab-icon">💬</span>
+    <span class="fab-ping"></span>
+  </div>
+  <div id="chatbot-window">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">🤖</div>
+        <div>
+          <p class="chat-title">Shrawasti's AI Assistant</p>
+          <p class="chat-status">● Online</p>
+        </div>
+      </div>
+      <button onclick="toggleChat()" class="chat-close">✕</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-msg bot">
+        <p>Hi! 👋 I'm Shrawasti's AI assistant. Ask me about her skills, projects, certificates, or education!</p>
+      </div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Ask something..." autocomplete="off" />
+      <button onclick="sendChat()" class="chat-send">➤</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
