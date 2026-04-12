@@ -516,4 +516,7 @@ function updateActiveNav() {
   });
   $$('.nav-a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
 }
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
+});
 
