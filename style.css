@@ -223,12 +223,12 @@ section { padding: 110px 8vw 90px; }
   min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
   padding-top: 80px; position: relative; overflow: hidden;
-#home {
-  background: var(--bg);
-  color: var(--text);
-}
+
 .hero-bg {
   position: absolute; inset: 0; pointer-events: none; will-change: transform;
+}
+  #home {
+  background: linear-gradient(135deg, #070511 0%, #120b30 40%, #0b1528 70%, #160920 100%);
 }
 .hero-bg::before {
   content: ''; position: absolute;
